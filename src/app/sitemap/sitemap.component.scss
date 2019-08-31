@@ -1,0 +1,40 @@
+.outer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #8b8887;
+}
+
+.main {
+    width: 100%;
+    background: #8b8887;
+    display: flex;
+    align-items: center;
+    max-width: 1500px;
+    color: white;
+    min-height: 300px;
+}
+
+.rows {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 620px) {
+    .rows {
+        align-items: center;
+    }
+}
+
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.logo {
+    max-width: 150px;
+    width: 150px;
+    margin: 30px;
+    margin-bottom: 0;
+}

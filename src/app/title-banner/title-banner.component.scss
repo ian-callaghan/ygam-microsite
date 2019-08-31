@@ -1,0 +1,46 @@
+.main {
+    width: 100%;
+    background: #ee891f;
+    display: flex;
+    justify-content: center;
+    line-height: 2.5rem;
+}
+.inner {
+    display: flex;
+    justify-content: center;
+    height: 20rem;
+    max-width: 1200px;
+}
+.text {
+    font-weight: bold;
+    font-size: 2rem;
+}
+.title {
+    font-weight: bold;
+}
+.image {
+    height: 95%;
+    padding-top: 40px;
+}
+.text-block {
+    max-width: 400px;
+    align-self: center;
+}
+
+@media (max-width: 1000px) {
+    .image {
+        display: none;
+    }
+    .inner {
+        height: 12.5rem;
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+    .text {
+        font-size: 1.5rem;
+    }
+    .text-block {
+        max-width: 300px;
+    }
+}

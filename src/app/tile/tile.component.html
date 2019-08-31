@@ -1,0 +1,12 @@
+<div class="text-block">
+    <div class="text-inner">
+        <div class="title">{{ title }}</div>
+        <p class="text">
+            <ng-content></ng-content>
+        </p>
+    </div>
+</div>
+<div class="image-block">
+    <img class="img" src="{{ imageUrl }}" />
+    <button (click)="onClick()" class="button">{{ button }}</button>
+</div>

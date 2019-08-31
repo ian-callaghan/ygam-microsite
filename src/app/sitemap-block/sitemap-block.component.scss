@@ -1,0 +1,18 @@
+.block {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    font-size: 0.85rem;
+    line-height: 1.25rem;
+}
+
+@media (max-width: 620px) {
+    .block {
+        text-align: center;
+        align-items: center;
+    }
+}
+
+.block {
+    margin: 30px;
+}
