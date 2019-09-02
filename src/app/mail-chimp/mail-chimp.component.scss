@@ -67,6 +67,15 @@
     cursor: pointer;
 }
 
+.submit:hover {
+    background: #eee;
+}
+
+.submit:disabled {
+    opacity: 0.85;
+    cursor: auto;
+}
+
 @media (max-width: 950px) {
     .submit {
         max-width: 175px;
@@ -84,20 +93,20 @@ select {
     box-sizing: border-box;
 }
 
-input[type='submit'] {
-    width: 100%;
-    background-color: #4caf50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
+// input[type='submit'] {
+//     width: 100%;
+//     background-color: #4caf50;
+//     color: white;
+//     padding: 14px 20px;
+//     margin: 8px 0;
+//     border: none;
+//     border-radius: 4px;
+//     cursor: pointer;
+// }
 
-input[type='submit']:hover {
-    background-color: #45a049;
-}
+// input[type='submit']:hover {
+//     background-color: #45a049;
+// }
 
 /* Customize the label (the container) */
 .container {
@@ -167,4 +176,10 @@ input[type='submit']:hover {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+.check {
+    margin: 15px;
+    margin-top: 13px;
+    width: 25px;
+    height: 25px;
 }

@@ -1,11 +1,13 @@
 <div class="outer">
     <div class="main">
         <div class="intro">
-            <h2>Sign Up to Insights</h2>
+            <ng-content select="[title]"></ng-content>
+            <ng-content select="[description]"></ng-content>
+            <!-- <h2>Sign Up to Insights</h2>
             <p>
                 The YGAM research programme will focus on the attitudes, thinking and behaviours of young people in relation to gambling and
                 social gaming.
-            </p>
+            </p> -->
         </div>
         <div class="form-container">
             <form [formGroup]="form" (ngSubmit)="submit()">
@@ -15,12 +17,13 @@
                     <br />
                     <div class="inner">
                         <span class="privacy">
-                            Privacy Policy:* <br />By ticking here I am consenting to YGAM processing my personal data in accordance with
-                            their Privacy Policy
+                            <ng-content select="[privacy]"></ng-content>
+                            <!-- Privacy Policy:* <br />By ticking here I am consenting to YGAM processing my personal data in accordance with
+                            their Privacy Policy -->
                         </span>
-                        <div class="container">
-                            <input type="checkbox" id="check" formControlName="check" />
-                            <span class="checkmark"></span>
+                        <div class="">
+                            <input type="checkbox" class="check" formControlName="check" />
+                            <!-- <span class="checkmark"></span> -->
                         </div>
 
                         <button class="submit" type="submit" [disabled]="!form.valid">Subscribe ></button>

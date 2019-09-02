@@ -13,7 +13,7 @@ export class MailChimpComponent {
     // reactive form components
     emailControl = new FormControl('', [Validators.required, Validators.email]);
     nameControl = new FormControl('', [Validators.required]);
-    check = new FormControl(false, [Validators.required]);
+    check = new FormControl(false, [Validators.requiredTrue]);
 
     submitted = false;
     mailChimpEndpoint =
