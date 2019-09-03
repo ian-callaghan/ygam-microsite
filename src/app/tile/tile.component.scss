@@ -63,6 +63,13 @@ $margin: 20px;
     :host {
         width: 100%;
     }
+    .text {
+        font-size: 1.15rem;
+    }
+
+    .title {
+        font-size: 1.25rem;
+    }
 }
 
 @media (max-width: 1290px) {

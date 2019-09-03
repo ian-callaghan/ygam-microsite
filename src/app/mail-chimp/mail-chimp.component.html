@@ -1,5 +1,9 @@
 <div class="outer">
     <div class="main">
+        <div *ngIf="message" class="popup">
+            <p [innerHTML]="message"></p>
+            <button (click)="closeMessage()" class="popup-button">Close</button>
+        </div>
         <div class="intro">
             <ng-content select="[title]"></ng-content>
             <ng-content select="[description]"></ng-content>
@@ -26,7 +30,7 @@
                             <!-- <span class="checkmark"></span> -->
                         </div>
 
-                        <button class="submit" type="submit" [disabled]="!form.valid">Subscribe ></button>
+                        <button class="submit" type="submit" [disabled]="!form.valid || pending">Subscribe ></button>
                     </div>
                 </div>
             </form>

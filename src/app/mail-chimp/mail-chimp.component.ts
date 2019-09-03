@@ -16,9 +16,11 @@ export class MailChimpComponent {
     check = new FormControl(false, [Validators.requiredTrue]);
 
     submitted = false;
+    pending = false;
     mailChimpEndpoint =
         'https://ygam.us18.list-manage.com/subscribe/post-json?u=7f85745e19492e4c8ba947afc&id=3e799b8387&subscribe=Subscribe&';
     error = '';
+    message = null;
 
     constructor(private http: HttpClient, fb: FormBuilder) {
         this.form = fb.group({
@@ -30,6 +32,7 @@ export class MailChimpComponent {
 
     submit() {
         this.error = '';
+        this.pending = true;
         if (this.emailControl.status === 'VALID' && this.nameControl.status === 'VALID') {
             const params = new HttpParams()
                 .set('FNAME', this.nameControl.value)
@@ -41,6 +44,8 @@ export class MailChimpComponent {
             // 'c' refers to the jsonp callback param key. This is specific to Mailchimp
             this.http.jsonp<MailChimpResponse>(mailChimpUrl, 'c').subscribe(
                 (response) => {
+                    console.log(response);
+                    this.message = response.msg;
                     if (response.result && response.result !== 'error') {
                         this.submitted = true;
                     } else {
@@ -53,6 +58,11 @@ export class MailChimpComponent {
                 }
             );
         }
+    }
+
+    closeMessage() {
+        this.message = null;
+        this.pending = false;
     }
 }
 

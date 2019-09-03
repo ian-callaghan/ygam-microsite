@@ -72,7 +72,8 @@
 }
 
 .submit:disabled {
-    opacity: 0.85;
+    opacity: 0.75;
+    background-color: white;
     cursor: auto;
 }
 
@@ -182,4 +183,37 @@ select {
     margin-top: 13px;
     width: 25px;
     height: 25px;
+}
+
+.popup {
+    position: absolute;
+    align-self: center;
+    background: white;
+    border: solid #ddd 1px;
+    max-width: 400px;
+    height: 200px;
+    -webkit-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.55);
+    -moz-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.55);
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.55);
+    padding: 15px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-button {
+    background-color: #cc3333; /* Green */
+    border: none;
+    color: white;
+    width: 225px;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 3px;
+    text-decoration: none;
+    display: inline-block;
+    height: 55px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: auto;
+    align-self: center;
 }

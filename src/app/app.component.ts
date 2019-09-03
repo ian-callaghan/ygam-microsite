@@ -21,7 +21,6 @@ export class AppComponent {
 
     constructor(private http: HttpClient, private compiler: Compiler, private injector: Injector, private moduleRef: NgModuleRef<any>) {
         http.get('./assets/template.html', { responseType: 'text' }).subscribe((result) => {
-            console.log(result);
             this.compileTemplate(result);
         });
     }
